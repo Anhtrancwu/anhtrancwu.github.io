@@ -1,0 +1,295 @@
+/* TO GET AN IDEA OF THE CSS YOU WILL LIKELY BE USING, SEE THE LISTS BELOW. */
+
+        /* 
+        
+        Spacing 
+
+            - padding (shorthand and/or specific properties like padding-bottom, etc.)
+
+            - margin, (shorthand and/or specific properties like margin-top, etc.)
+
+            - letter-spacing, word-spacing, line-height
+
+            - width, max-width, min-width
+            - height, max-height, min-height
+
+        Typography 
+
+            - font-family, font-size, font-style, font-weight
+
+            - text-decoration, text-align
+
+            - color
+
+            - text-shadow, text-transform
+
+        Box, Layout and Border 
+
+            - border (shorthand and/or specific properties like border-top, border-bottom-radius, border-width, etc.)
+
+            - box-shadow
+
+            - display, float, align-items, align-content
+
+            - grid-template-columns, grid-column-gap
+
+            - transform
+
+        Other
+
+            - :nth()-child (to target specific child elements)
+
+            - :focus, :hover, :active (to target link states)
+
+            - @font-face or @import (to import typefaces)
+
+        */
+
+
+/* ------ START WRITING YOUR CODE BELOW ------ */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    padding: 20px;
+}
+
+/* Header Styling */
+header {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+    transform: rotate(-5deg);
+}
+
+.sidebar {
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sidebar a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.3s;
+  }
+  
+  .sidebar a:hover {
+    background-color: #575757;
+  }
+  
+  /* Main Content Styles */
+  .main-content {
+
+    flex: 1;
+    padding: 20px;
+    background-color: #f4f4f4;
+  }
+
+header .highlight {
+    background-color:#a7480a;
+    padding: 5px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+/* Navigation Menu */
+nav ul {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: left;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-top: .125rem solid #33658A;
+    padding: 15px;
+    border-bottom: .125rem solid #33658A;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 30px;
+    margin-right: 50px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #33658A;
+}
+
+nav ul li a:hover {
+    color: #33658A;
+}
+
+/* Main Content Styling */
+main {
+    
+    gap: 20px;
+    margin-left: 30px;
+}
+
+main h2 {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.main-section {
+    display: flex;
+    flex-direction: row;
+}
+
+.article-image img {
+    float: left;
+    margin: 0 20px 20px 0;
+    width: 40%;
+
+}
+
+.main-section h3 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.main-section p {
+    margin-bottom: 20px;
+}
+
+/* Subsection Styling */
+.subsection {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 50px;
+}
+
+.subsection figure {
+    text-align: center;
+}
+
+.subsection img {
+    width: 100%;
+}
+
+
+.subsection figcaption {
+    background-color: #edeedc;
+    display: block;
+    text-align: left;
+    font-size: smaller;
+    padding: 0.5rem;
+}
+
+time {
+    font-style: italic;
+    color: #777;
+    font-size: small;
+}
+
+/* Button Styling */
+button {
+    text-align: center;
+    display: inline-block;
+    padding: 10px;
+    background-color: #33658A;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+button:hover {
+    background-color: #33658A;
+}
+
+/* Aside Styling */
+aside {
+    flex: 1;
+    margin-left: 20px;
+    border-left: 3px solid #cfcfcf;
+    padding: 0 20px;
+  
+}
+
+aside > h3 {
+    margin-bottom: 8px;
+}
+
+
+
+aside img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+aside p {
+    font-size: 0.75rem;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid #cfcfcf;
+}
+
+.expand {
+    display: inline-block;
+    margin-top: 10px;
+    text-align: center;
+    color: #33658A;
+    font-size: 5px;
+    text-decoration: none;
+}
+
+article {
+    flex: 4;
+}
+
+/* Footer Styling */
+footer {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.8rem;
+    color: #000000;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer p:nth-child(1) {
+    flex: 1;
+    text-align: left;
+}
+
+footer p:nth-child(2) {
+    flex: 2;
+    text-align: right;
+}
+
+footer a {
+    color: #33658A;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
